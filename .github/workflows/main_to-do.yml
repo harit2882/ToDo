@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: kotlin-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: 'ToDo/build/libs/*.jar'
 
   deploy:
     runs-on: windows-latest
