@@ -7,9 +7,6 @@ on:
   pull_request:
     branches:
       - main
-  pull_request_target:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -35,7 +32,7 @@ jobs:
           path: build/libs/*.jar
 
   deploy:
-    if: github.event_name == 'pull_request_target' && github.base_ref == 'main'
+    if: github.event_name == 'pull_request' && contains(github.ref,'main')
     runs-on: windows-latest
     needs: build
     environment:
