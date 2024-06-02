@@ -3,9 +3,6 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - dev
-  pull_request:
-    branches:
       - main
   workflow_dispatch:
 
@@ -31,7 +28,6 @@ jobs:
           path: build/libs/*.jar
 
   deploy:
-    if: github.event_name == 'pull_request' && github.base_ref == 'main'
     runs-on: windows-latest
     needs: build
     environment:
