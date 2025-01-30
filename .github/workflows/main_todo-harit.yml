@@ -22,9 +22,7 @@ jobs:
           java-version: '17'
 
       - name: Change directory to ToDo and build
-        run: |
-          cd ToDo
-          ./gradlew.bat build
+        run: ./gradlew.bat build
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
