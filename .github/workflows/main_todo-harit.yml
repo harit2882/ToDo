@@ -59,4 +59,4 @@ jobs:
           app-name: 'todo-harit'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D9E529E3A0A143EEA3480491386C04EA }}
-          package: 'ToDo/ToDo/build/libs/*.jar'
+          package: 'ToDo/build/libs/*.jar'
